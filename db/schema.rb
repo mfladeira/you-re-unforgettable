@@ -33,8 +33,8 @@ ActiveRecord::Schema.define(version: 2022_08_12_002329) do
   end
 
   create_table "non_user_friends", force: :cascade do |t|
-    t.string "name"
-    t.datetime "special_date"
+    t.string "name", null: false
+    t.datetime "special_date", null: false
     t.decimal "price", precision: 8, default: "0"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 2022_08_12_002329) do
   end
 
   create_table "preferences", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -58,8 +58,8 @@ ActiveRecord::Schema.define(version: 2022_08_12_002329) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.datetime "birthday"
-    t.string "phone_number"
+    t.date "birthday", null: false
+    t.string "phone_number", null: false
     t.decimal "price", precision: 8, default: "0"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
