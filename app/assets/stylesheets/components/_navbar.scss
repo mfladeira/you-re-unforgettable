@@ -1,6 +1,18 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: $glass-effect-background;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.3px);
+  -webkit-backdrop-filter: blur(5.3px);
+  padding: 10px;
+
+  .nav-link {
+    color: $white;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +21,5 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+
 }
