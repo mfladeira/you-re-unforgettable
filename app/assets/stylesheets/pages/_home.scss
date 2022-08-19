@@ -1,3 +1,4 @@
+
 .family {
   height: 150px;
   width: 150px;
@@ -127,13 +128,13 @@
     font-size: .5em;
     display: block;
     font-family: $body-font;
-    color: $white;
+    color: $primary;
     margin-right: 330px;
-    text-shadow: 0 0 10px $white,
-      0 0 40px $white,
-      0 0 60px $white,
-      0 0 80px $white,
-      0 0 100px $white;
+    text-shadow: 0 0 10px $primary,
+      0 0 40px $primary,
+      0 0 60px $primary,
+      0 0 80px $primary,
+      0 0 100px $primary;
   }
 
   .home-section {
@@ -149,15 +150,15 @@
 
   .home-section h1 {
     font-family: 'poppins';
-    color: $white;
+    color: $terciary;
     font-size: 3em;
     text-transform: uppercase;
     font-weight: 700;
-    text-shadow: 0 0 10px $white,
-      0 0 40px $white,
-      0 0 60px $white,
-      0 0 80px $white,
-      0 0 100px $white;
+    text-shadow: 0 0 10px $terciary,
+      0 0 40px $terciary,
+      0 0 60px $terciary,
+      0 0 80px $terciary,
+      0 0 100px $terciary;
     z-index: 9999;
   }
 }
@@ -167,13 +168,13 @@
     font-size: .5em;
     display: block;
     font-family: $body-font;
-    color: $white;
+    color: $primary;
     margin-right: 220px;
-    text-shadow: 0 0 10px $white,
-      0 0 40px $white,
-      0 0 60px $white,
-      0 0 80px $white,
-      0 0 100px $white;
+    text-shadow: 0 0 10px $primary,
+      0 0 40px $primary,
+      0 0 60px $primary,
+      0 0 80px $primary,
+      0 0 100px $primary;
   }
 
   .home-section {
@@ -189,15 +190,15 @@
 
   .home-section h1 {
     font-family: 'poppins';
-    color: $white;
+    color: $terciary;
     font-size: 2em;
     text-transform: uppercase;
     font-weight: 700;
-    text-shadow: 0 0 10px $white,
-      0 0 40px $white,
-      0 0 60px $white,
-      0 0 80px $white,
-      0 0 100px $white;
+    text-shadow: 0 0 10px $terciary,
+      0 0 40px $terciary,
+      0 0 60px $terciary,
+      0 0 80px $terciary,
+      0 0 100px $terciary;
     z-index: 9999;
   }
 }

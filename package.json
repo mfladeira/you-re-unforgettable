@@ -11,6 +11,7 @@
     "simplex-noise": "^4.0.0",
     "stimulus": "^3.1.0",
     "turbolinks": "^5.2.0",
+    "typed.js": "^2.0.12",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
   },
