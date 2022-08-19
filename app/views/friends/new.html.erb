@@ -3,7 +3,8 @@
     <%= f.input :name, input_html: { class: 'teste' }, label: false %>
     <%= f.input :max_price, as: :decimal %>
     <%= f.input :birthday, as: :date %>
-    <%= f.input :phone_number, as: :string%>
+    <%= f.input :phone_number, as: :string %>
+    <%= f.input :product_categories, collection: ProductCategory::CATEGORIES %>
     <%= f.button :submit %>
   <% end %>
 </div>
