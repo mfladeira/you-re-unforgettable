@@ -10,3 +10,36 @@
     0 0 80px $terciary,
     0 0 100px $terciary;
   z-index: 9999;
+}
+
+.label-new{
+  font-size: 1em;
+  display: block;
+  font-family: $body-font;
+  color: $primary;
+  text-shadow: 0 0 10px $primary,
+    0 0 40px $primary,
+    0 0 60px $primary,
+    0 0 80px $primary,
+    0 0 100px $primary;
+}
+
+.form-style{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-photo {
+  border: 1px solid #d3d3d3;
+  padding: 16px 24px;
+  cursor: pointer;
+  font-weight: 500;
+  background: white;
+  border-radius: 2px;
+}
+
+.buttons-new{
+  display: flex;
+}
