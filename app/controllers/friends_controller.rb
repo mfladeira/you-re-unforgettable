@@ -23,7 +23,7 @@ class FriendsController < ApplicationController
   private
 
   def friends_params
-    params.require(:friend).permit(:name, :max_price, :birthday, :phone_number)
+    params.require(:friend).permit(:name, :max_price, :birthday, :phone_number, :photo)
   end
 
   def product_categories_params

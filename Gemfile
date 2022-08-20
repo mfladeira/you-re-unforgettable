@@ -36,7 +36,7 @@ gem 'devise'
 
 # Cloudinary
 gem 'dotenv-rails', groups: [:development, :test]
-
+gem 'cloudinary', '~> 1.16.0'
 
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.6.1'

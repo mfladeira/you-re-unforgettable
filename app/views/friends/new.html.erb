@@ -1,10 +1,15 @@
-<div>
-  <%= simple_form_for @friend do |f|  %>
-    <%= f.input :name, input_html: { class: 'teste' }, label: false %>
-    <%= f.input :max_price, as: :decimal %>
-    <%= f.input :birthday, as: :date %>
-    <%= f.input :phone_number, as: :string %>
-    <%= f.input :product_categories, collection: ProductCategory::CATEGORIES %>
-    <%= f.button :submit %>
-  <% end %>
-</div>
+
+<section class="container">
+  <div>
+    <h1 class="title-new"> Add a Special Date</h1>
+    <%= simple_form_for @friend do |f|  %>
+      <%= f.input :name, input_html: { class: 'teste' }, label: false %>
+      <%= f.input :max_price, as: :decimal %>
+      <%= f.input :birthday, as: :date %>
+      <%= f.input :phone_number, as: :string %>
+      <%= f.input :product_categories, collection: ProductCategory::CATEGORIES %>
+      <%= f.input :photo, as: :file %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</section>
