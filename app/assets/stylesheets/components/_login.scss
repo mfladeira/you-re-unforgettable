@@ -1,0 +1,47 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - 100px);
+  padding: 80px;
+
+  h2 {
+   color: $primary;
+   text-align: center;
+  }
+
+  .color_label {
+    color: $primary;
+  }
+
+  .left-col {
+    width: 40vw;
+    height: 300px;
+    background-image: url("unforgettablelogin.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .right-col {
+    background: var(--bg-color);
+    width: 50vw;
+    height: 75%;
+  }
+
+  .signup {
+    text-decoration: none;
+    color: $white;
+  }
+
+  .btn-login {
+    width: 100%;
+    background: $primary;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+
+  .btn-login:hover {
+    opacity: .5;
+  }
+}

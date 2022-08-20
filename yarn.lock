@@ -6343,10 +6343,10 @@ statuses@2.0.1:
   resolved "https://registry.npmjs.org/statuses/-/statuses-1.5.0.tgz"
   integrity sha512-OpZ3zP+jT1PI7I8nemJX4AKmAX070ZkYPVWV/AaKTJl+tXCTGyVdC1a4SL8RUQYEwk/f34ZX8UTykN68FwrqAA==
 
-stimulus@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/stimulus/-/stimulus-3.1.0.tgz#225298f1936f96b0eafa883b8b304266427912c3"
-  integrity sha512-ln+BtLkhemwJozr5N3I5q0kGlSv6fmcPi3JtDjBo7gnnz2tAYhK2WBhyY/EN/4+CWIwqp3qPm3Pc+i9CjIXrtg==
+"stimulus@^3.1.0":
+  "integrity" "sha512-ln+BtLkhemwJozr5N3I5q0kGlSv6fmcPi3JtDjBo7gnnz2tAYhK2WBhyY/EN/4+CWIwqp3qPm3Pc+i9CjIXrtg=="
+  "resolved" "https://registry.npmjs.org/stimulus/-/stimulus-3.1.0.tgz"
+  "version" "3.1.0"
   dependencies:
     "@hotwired/stimulus" "^3.1.0"
     "@hotwired/stimulus-webpack-helpers" "^1.0.0"
@@ -6668,18 +6668,13 @@ type-is@~1.6.18:
   resolved "https://registry.npmjs.org/type-is/-/type-is-1.6.18.tgz"
   integrity sha512-TkRKr9sUTxEH8MdfuCSP7VizJyzRNMjj2J2do2Jr3Kym598JVdEksuzPQCnlFPW4ky9Q+iA+ma9BGm06XQBy8g==
   dependencies:
-    media-typer "0.3.0"
-    mime-types "~2.1.24"
+    "media-typer" "0.3.0"
+    "mime-types" "~2.1.24"
 
-typed.js@^2.0.12:
-  version "2.0.12"
-  resolved "https://registry.yarnpkg.com/typed.js/-/typed.js-2.0.12.tgz#246aff074c8e18d32ec27acb7be15094ac0bc0e1"
-  integrity sha512-lyACZh1cu+vpfYY3DG/bvsGLXXbdoDDpWxmqta10IQUdMXisMXOEyl+jos+YT9uBbzK4QaKYBjT3R0kTJO0Slw==
-
-typedarray@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz"
-  integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
+"typedarray@^0.0.6":
+  "integrity" "sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA=="
+  "resolved" "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz"
+  "version" "0.0.6"
 
 unbox-primitive@^1.0.2:
   version "1.0.2"
