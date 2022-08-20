@@ -6,7 +6,7 @@ import Typed from "typed.js"
 export default class extends Controller {
   connect() {
     new Typed(this.element, {
-      strings: ["shows that you care.",
+      strings: ["means that you care.",
                  "makes people feel special.",
                  "shows that you are there.",
                  "connects people in a unique way."],
