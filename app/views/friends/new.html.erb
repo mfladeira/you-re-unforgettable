@@ -1,20 +1,44 @@
-
-<section class="container">
+<div class="effect-class">
+<section>
   <div>
     <h2 class="title-new text-center my-4"> Add a Special Date</h2>
-    <div  class="form-style">
-      <%= simple_form_for @friend, html: { class: 'label-new' } do |f|  %>
-        <%= f.input :name, input_html: { class: ''}, label: "Friend name" %>
-        <%= f.input :max_price, as: :decimal %>
-        <%= f.input :birthday, as: :date %>
-        <%= f.input :phone_number, as: :string %>
-        <%= f.input :product_categories, collection: ProductCategory::CATEGORIES %>
-        <div class="buttons-new">
-          <%= f.input :photo, as: :file, input_html: { class: 'd-none' },
-          label_html:  { class: 'upload-photo button-new'}, label: '📷 Upload a photo' %>
-          <%= f.button :submit, input_html: { class: 'upload-photo'}  %>
-        </div>
-      <% end %>
+    <div class="section-divider">
+
+<div class="wrapper">
+		<div class="gallery">
+			<ul>
+				<li><img src="<%= image_path("family1.jpg")%>"></li>
+				<li><img src="<%= image_path("family2.jpg")%>">></li>
+				<li><img src="<%= image_path("family10.jpg")%>">></li>
+        <li><img src="<%= image_path("family4.jpg")%>">></li>
+        <li><img src="<%= image_path("family5.jpg")%>">></li>
+        <li><img src="<%= image_path("family6.jpg")%>">></li>
+        <li><img src="<%= image_path("family7.jpg")%>">></li>
+        <li><img src="<%= image_path("family8.jpg")%>">></li>
+        <li><img src="<%= image_path("family9.jpg")%>">></li>
+			</ul>
+		</div>
+	</div>
+
+      <div>
+        <%= simple_form_for @friend, html: { class: 'label-new glass p-4 mx-5' } do |f|  %>
+          <%= f.input :name, input_html: { class: 'glass-label'}, label: "Friend name" %>
+          <%= f.input :max_price, as: :decimal, input_html: { class: 'glass-label'}, label: "Max Price($)" %>
+          <%= f.input :birthday, :as => :date, :start_year => Date.today.year - 90,
+                              :end_year => Date.today.year,
+                              :order => [:day, :month, :year],
+                               input_html: { class: 'glass-label'} %>
+          <%= f.input :phone_number, as: :string, input_html: { class: 'glass-label'} %>
+          <%= f.input :product_categories, collection: ProductCategory::CATEGORIES, input_html: { class: 'glass-label'}  %>
+          <div class="buttons-new">
+            <%= f.input :photo, as: :file, input_html: { class: ' d-none ' },
+            label_html:  { class: ' mt-4 cursor '}, label: '📷 Upload Image' %>
+            <%= f.button :submit, '👩🏾‍🤝‍👨🏻 Create a Friend', class: "create-friend" %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </section>
+
+</div>
