@@ -1,11 +1,37 @@
 .navbar-lewagon {
   justify-content: space-between;
+  align-items: center;
   background: $glass-effect-background;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5.3px);
   -webkit-backdrop-filter: blur(5.3px);
   padding: 10px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
 
+  .nav-item {
+    position: relative;
+    margin: 0 10px;
+
+    &::after{
+      content: "";
+      display: block;
+      height: 2.5px;
+      background: $primary;
+      position: absolute;
+      margin-top: 4px;
+      bottom: 0;
+      width: 0;
+      transition: .4;
+    }
+
+    &:hover::after {
+      width: 100%;
+      transition: width .6s;
+    }
+  }
 
   .nav-link {
     color: $primary;
@@ -14,22 +40,7 @@
     0 0 60px $primary,
     0 0 80px $primary,
     0 0 100px $primary;
-
-    &::after{
-      content: "";
-      display: block;
-      height: 2.5px;
-      width: 0px;
-      background: $primary;
-      position: absolute;
-      margin-top: 4px;
-      transition: 0.3s;
-    }
-
-    &:hover::after {
-      width: 85px;
-      transition: width .6s;
-    }
+    width: 100%;
   }
 }
 
@@ -39,11 +50,6 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
-
-}
-
-.header-menu a::after {
-
 }
 
 .avatar-blue{
