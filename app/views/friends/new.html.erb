@@ -29,7 +29,7 @@
 
       <div>
         <%= simple_form_for @friend, html: { class: 'label-new glass p-4 mx-5' } do |f|  %>
-          <%= f.input :name, input_html: { class: 'glass-label'}, label: "Birthday Person Name" %>
+          <%= f.input :name, input_html: { class: 'glass-label'}, label: "Birthday Person" %>
           <%= f.input :max_price, as: :decimal, input_html: { class: 'glass-label'}, label: "Max Gift Price($)" %>
           <%= f.input :birthday, :as => :date, :start_year => Date.today.year - 90,
                               :end_year => Date.today.year,
