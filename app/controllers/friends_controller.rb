@@ -20,10 +20,6 @@ class FriendsController < ApplicationController
     end
   end
 
-  def show
-    @friend = Friend.find(params[:id])
-  end
-
   private
 
   def friends_params
