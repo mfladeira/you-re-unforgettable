@@ -69,6 +69,30 @@ border: 1px solid rgba(255, 255, 255, 0.23);
   }
   }
 
+  strong{
+    opacity: 1;
+    color: $terciary;
+    text-shadow: 0 0 10px $terciary,
+      0 0 40px $terciary,
+      0 0 60px $terciary,
+      0 0 80px $terciary,
+      0 0 100px $terciary;
+  }
+
+
+
+  .new-text{
+    width: 88ch;
+    color: $primary;
+    text-shadow: 0 0 10px $primary,
+    0 0 40px $primary,
+    0 0 60px $primary,
+    0 0 80px $primary,
+    0 0 100px $primary;
+    font-size: .9em;
+    margin: 10px auto;
+  }
+
 .create-friend {
   font-weight: 500;
   color: $primary;
@@ -110,6 +134,14 @@ border: 1px solid rgba(255, 255, 255, 0.23);
 	margin: 0px auto;
 }
 
+.gallery{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
 div.gallery {
 	margin-top: 10px;
 }
@@ -135,12 +167,14 @@ div.gallery ul li {
 	margin: 5px;
 	padding: 5px;
 	z-index: 0;
+  opacity: .5;
 }
 
 /* Make sure z-index is higher on hover */
 /* Ensure that hover image overlapped the others */
 div.gallery ul li:hover {
 	z-index: 5;
+  opacity: 1;
 }
 
 /* Image is position nicely under li */
