@@ -15,10 +15,11 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
+    <div style="margin-top: 80px">
+      <%= render 'shared/navbar' %>
+      <%= render 'shared/flashes' %>
 
-    <%= yield %>
-
+      <%= yield %>
+    </div>
   </body>
 </html>

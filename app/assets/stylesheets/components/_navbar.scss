@@ -1,17 +1,46 @@
 .navbar-lewagon {
   justify-content: space-between;
+  align-items: center;
   background: $glass-effect-background;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5.3px);
   -webkit-backdrop-filter: blur(5.3px);
   padding: 10px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+
+  .nav-item {
+    position: relative;
+    margin: 0 10px;
+
+    &::after{
+      content: "";
+      display: block;
+      height: 2.5px;
+      background: $primary;
+      position: absolute;
+      margin-top: 4px;
+      bottom: 0;
+      width: 0;
+      transition: .4;
+    }
+
+    &:hover::after {
+      width: 100%;
+      transition: width .6s;
+    }
+  }
 
   .nav-link {
-    color: $white;
-
-    &:hover {
-      opacity: .8;
-    }
+    color: $primary;
+    text-shadow: 0 0 10px $primary,
+    0 0 40px $primary,
+    0 0 60px $primary,
+    0 0 80px $primary,
+    0 0 100px $primary;
+    width: 100%;
   }
 }
 
@@ -21,7 +50,44 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
-
 }
 
+.avatar-blue{
+  filter:hue-rotate(215deg)
+}
 
+.logo-scale{
+  width: 50px;
+  height: 30px;
+}
+
+.typed-fixed{
+  color: $terciary;
+  text-shadow: 0 0 10px $terciary,
+    0 0 40px $terciary,
+    0 0 60px $terciary,
+    0 0 80px $terciary,
+    0 0 100px $terciary;
+    font-size: .8em;
+}
+
+.typed-shift{
+  color: $primary;
+  text-shadow: 0 0 10px $primary,
+    0 0 40px $primary,
+    0 0 60px $primary,
+    0 0 80px $primary,
+    0 0 100px $primary;
+    font-size: .8em;
+}
+
+/* If fade out option is set */
+.typed-cursor {
+  color: $primary;
+  text-shadow: 0 0 10px $primary,
+    0 0 40px $primary,
+    0 0 60px $primary,
+    0 0 80px $primary,
+    0 0 100px $primary;
+    font-size: .8em;
+}

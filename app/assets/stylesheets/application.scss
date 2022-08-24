@@ -12,11 +12,12 @@
 @import "components/index";
 @import "pages/index";
 
-@import "friends/new.scss";
+@import "friends/new";
 
 // Specific CSS for your home-page
 body {
   background-color: $background-color;
+  margin-bottom: 70px;
 }
 
 * {
