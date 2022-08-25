@@ -10,16 +10,16 @@
               <div class="form-inputs">
                 <%= f.input :email,
                             label: 'E-mail',
-                            label_html: { class: 'color_label' },
+                            label_html: { class: 'label-new' },
                             required: false,
                             autofocus: true,
                             input_html: { autocomplete: "email" }%>
                 <%= f.input :password,
                             label: 'Password',
-                            label_html: { class: 'color_label' },
+                            label_html: { class: 'label-new' },
                             required: false,
                             input_html: { autocomplete: "current-password" } %>
-                <%= f.input :remember_me, label_html: { class: 'color_label' }, as: :boolean if devise_mapping.rememberable? %>
+                <%= f.input :remember_me, label_html: { class: 'label-new' }, as: :boolean if devise_mapping.rememberable? %>
               </div>
               <div class="form-actions text-center">
                 <%= f.button :submit, "Log in", class: "btn-login" %>
