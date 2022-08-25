@@ -1,0 +1,68 @@
+.containerCard {
+  width: 300px;
+  margin: 24px;
+}
+
+h3{
+	font-size: 24px;
+	color: $primary;
+	font-weight: bold;
+  text-shadow: 0 0 10px $primary,
+  0 0 20px $primary;
+}
+
+h5 {
+  padding: 6px 0;
+	color: $white;
+  text-shadow: 0 0 10px $white,
+  0 0 20px $white;
+  font-size: 16px;
+}
+
+.containerCards{
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+#team img{
+	margin-top: -70px;
+  margin-left: 60px;
+  margin-bottom: 10px;
+	width: 160px;
+	height: 160px;
+	object-fit: cover;
+  margin-bottom: 20px;
+}
+
+#team i{
+	font-size: 26px;
+	color: $terciary;
+}
+
+#team p{
+	font-weight: 500;
+}
+
+#team .card{
+	background: rgba(228, 228, 228, 0.088);
+	border-radius: 25px;
+	box-shadow: 5px 5px 15px $secondary;
+	transition: all 0.3s ease-in;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+  padding: 30px 14px;
+}
+
+#team .card:hover{
+	background: $secondary;
+	color: $white;
+	border: none;
+	box-shadow: 5px 5px 10px $primary;
+}
+
+#team .card:hover h3, #team .card:hover i{
+	color: $white;
+}
