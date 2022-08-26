@@ -36,7 +36,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1300px;
   }
 
 
@@ -104,6 +103,7 @@
 
     &:hover {
       border: transparent;
+      opacity: .8;
     }
 
     &:focus {
@@ -132,8 +132,7 @@
 
 
   .wrapper {
-    width: 40%;
-    margin: 0px auto;
+    width: 600px;
   }
 
   .gallery {

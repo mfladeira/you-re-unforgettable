@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="height: 100vh">
   <head>
     <title>YouReUnforgettable</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -15,11 +15,9 @@
   </head>
 
   <body>
-    <div style="margin-top: 80px">
-      <%= render 'shared/navbar' %>
-      <%= render 'shared/flashes' %>
+    <%= render 'shared/navbar' %>
+    <%= render 'shared/flashes' %>
 
-      <%= yield %>
-    </div>
+    <%= yield %>
   </body>
 </html>

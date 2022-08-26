@@ -35,7 +35,7 @@
                                 input_html: { class: 'glass-label'} %>
             <%= f.input :product_categories, collection: ProductCategory::CATEGORIES, input_html: { class: 'glass-label'}, label: 'Birthday Person Preference'  %>
             <div class="buttons-new">
-              <%= f.input :photo, as: :file, input_html: { class: ' d-none ' },
+              <%= f.input :avatar, as: :file, input_html: { class: ' d-none' },
               label_html:  { class: ' mt-4 cursor '}, label: '📷 Upload Image' %>
               <%= f.button :submit, '👩🏾‍🤝‍👨🏻 Create a Friend', class: "create-friend" %>
             </div>

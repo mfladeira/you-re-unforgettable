@@ -12,33 +12,33 @@
         <div class="form-inputs">
           <%= f.input :email,
                       label: 'E-mail',
-                      label_html: { class: 'color_label' },
+                      label_html: { class: 'label-new' },
                       required: true,
                       autofocus: true,
                       input_html: { autocomplete: "email" }%>
           <%# <%= f.input :phone_number,
                       label: 'Phone number',
-                      label_html: { class: 'color_label' },
+                      label_html: { class: 'label-new' },
                       required: true,
                       autofocus: true,
                       input_html: { autocomplete: "email" } %>
           <%# <%= f.input :birthday, as: :date,
                       label: 'Birthday',
-                      label_html: { class: 'color_label' },
+                      label_html: { class: 'label-new' },
                       required: true,
                       autofocus: true %>
           <%= f.input :password,
                       label: 'Password',
-                      label_html: { class: 'color_label' },
+                      label_html: { class: 'label-new' },
                       required: true,
                       hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                       input_html: { autocomplete: "new-password" } %>
           <%= f.input :password_confirmation,
                       label: 'Password Confirmation',
-                      label_html: { class: 'color_label' },
+                      label_html: { class: 'label-new' },
                       required: true,
                       input_html: { autocomplete: "new-password" } %>
-          <%= f.input :avatar, as: :file, input_html: { class: 'd-none' }, label_html: { class: 'upload-photo'}, label_html: { class: 'color_label' }, label: '📷 Upload a photo' %>
+          <%= f.input :avatar, as: :file, input_html: { class: 'd-none' }, label_html: { class: 'upload-photo'}, label_html: { class: 'label-new' }, label: '📷 Upload a photo' %>
         </div>
 
         <div class="form-actions">

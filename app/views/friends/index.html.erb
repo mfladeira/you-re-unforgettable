@@ -1,6 +1,21 @@
-<% @friends.each do |friend| %>
-  <div style="display: flex; color:white">
-    <p><%= friend.name %></p>
-    <p><%= friend.birthday %></p>
-  </div>
-<% end %>
+		<section id="team">
+			<div class="containerCards">
+        <% @friends.each do |friend| %>
+          <%# <% @preference = ProductCategory.where(friend_id: friend.id).first %> %>
+          <div class="containerCard">
+            <div class="card">
+                <% if friend.avatar.attached? %>
+                  <%= cl_image_tag friend.avatar.key, class:"img-fluid rounded-circle", alt:"Card image cap", crop: :fill %>
+                <% else %>
+                  <%=image_tag('user.png')%>
+                <% end %>
+                <h3><%= friend.name.capitalize%></h3>
+                <h5>Age: <%=((Time.zone.now - friend.birthday .to_time) / 1.year.seconds).floor%> years</h5>
+                <h5>Birthday: <%=friend.birthday.strftime("%B %d, %Y")%></h5>
+                <h5>Max Gift Price: <%=friend.max_price%> $</h5>
+                <%# <h5>Preference: <%= @preference.name $</h5> %>
+            </div>
+          </div>
+        <% end %>
+			</div>
+		</section>

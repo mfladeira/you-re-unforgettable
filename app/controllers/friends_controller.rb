@@ -16,7 +16,7 @@ class FriendsController < ApplicationController
     @product_category.name = params[:friend][:product_categories]
 
     if @friend.save && @product_category.save
-      redirect_to root_path
+      redirect_to '/friends'
     end
   end
 
