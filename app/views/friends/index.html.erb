@@ -1,6 +1,7 @@
 		<section id="team">
 			<div class="containerCards">
         <% @friends.each do |friend| %>
+          <%# <% @preference = ProductCategory.where(friend_id: friend.id).first %> %>
           <div class="containerCard">
             <div class="card">
                 <% if friend.avatar.attached? %>
@@ -12,7 +13,7 @@
                 <h5>Age: <%=((Time.zone.now - friend.birthday .to_time) / 1.year.seconds).floor%> years</h5>
                 <h5>Birthday: <%=friend.birthday.strftime("%B %d, %Y")%></h5>
                 <h5>Max Gift Price: <%=friend.max_price%> $</h5>
-                <%# <h5>Preference: <%=friend.preferences $</h5> %>
+                <%# <h5>Preference: <%= @preference.name $</h5> %>
             </div>
           </div>
         <% end %>
