@@ -1,0 +1,28 @@
+<div class="container-edit">
+  <section>
+    <div>
+      <h2 class="title-edit text-center my-4"> Edit Friend Info</h2>
+
+      <div class="section-divider-edit">
+
+        <article><%= cl_image_tag @friend.avatar.key%></article>
+        <div>
+          <%= simple_form_for @friend, html: { class: 'label-new-edit glass-edit p-4 mx-5' } do |f|  %>
+            <%= f.input :name, input_html: { class: 'glass-label-edit'}, label: "Birthday Person" %>
+            <%= f.input :max_price, as: :decimal, input_html: { class: 'glass-label-edit '}, label: "Max Gift Price($)" %>
+            <%= f.input :birthday, :as => :date, :start_year => Date.today.year - 90,
+                                :end_year => Date.today.year,
+                                :order => [:day, :month, :year],
+                                input_html: { class: 'glass-label-edit'} %>
+            <%= f.input :product_categories, collection: ProductCategory::CATEGORIES, input_html: { class: 'glass-label-edit'}, label: 'Birthday Person Preference'  %>
+            <div class="buttons-edit">
+              <%= f.input :avatar, as: :file, input_html: { class: ' d-none' },
+              label_html:  { class: ' mt-4 cursor '}, label: '📷 Change Avatar' %>
+              <%= f.button :submit, '👩🏾‍🤝‍👨🏻 Add Changes', class: "create-friend-edit" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
