@@ -20,6 +20,25 @@ class FriendsController < ApplicationController
     end
   end
 
+  def destroy
+    @friend = Friend.find(params[:id])
+    @friend.destroy
+
+    # no need for app/views/restaurants/destroy.html.erb
+    redirect_to friends_path
+  end
+
+  def edit
+    @friend = Friend.find(params[:id])
+    # redirect_to '/friends/'
+  end
+
+  def update
+    @friend = Friend.find(params[:id])
+    @friend.update(friends_params)
+      redirect_to '/friends'
+  end
+
   private
 
   def friends_params
