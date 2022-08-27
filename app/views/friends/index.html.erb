@@ -1,21 +1,32 @@
-		<section id="team">
-			<div class="containerCards">
-        <% @friends.each do |friend| %>
-          <%# <% @preference = ProductCategory.where(friend_id: friend.id).first %> %>
-          <div class="containerCard">
-            <div class="card">
-                <% if friend.avatar.attached? %>
-                  <%= cl_image_tag friend.avatar.key, class:"img-fluid rounded-circle", alt:"Card image cap", crop: :fill %>
-                <% else %>
-                  <%=image_tag('user.png')%>
-                <% end %>
-                <h3><%= friend.name.capitalize%></h3>
-                <h5>Age: <%=((Time.zone.now - friend.birthday .to_time) / 1.year.seconds).floor%> years</h5>
-                <h5>Birthday: <%=friend.birthday.strftime("%B %d, %Y")%></h5>
-                <h5>Max Gift Price: <%=friend.max_price%> $</h5>
-                <%# <h5>Preference: <%= @preference.name $</h5> %>
+<section id="team">
+  <h2 class="title-index text-center my-5">Birthday List</h2>
+  <div class="containerCards">
+    <% @friends.each do |friend| %>
+      <div class="containerCard">
+        <div class="card">
+            <% if friend.avatar.attached? %>
+              <%= cl_image_tag friend.avatar.key, class:"img-fluid rounded-circle", alt:"Card image cap", crop: :fill %>
+            <% else %>
+              <%=image_tag('user.png')%>
+            <% end %>
+            <h3><%= friend.name.capitalize%></h3>
+            <h5><span class="friends-detail"> Age: </span><%=((Time.zone.now - friend.birthday .to_time) / 1.year.seconds).floor%> years</h5>
+            <h5><span class="friends-detail">Birthday: </span><%=friend.birthday.strftime("%B %d, %Y")%></h5>
+            <h5><span class="friends-detail">Max Gift Price: </span><%=friend.max_price%> $</h5>
+            <div class="icon">
+              <%= link_to edit_friend_path(friend),
+                class:"text-end btn-x flex-grow-1 icon mx-2" do %>
+                <i class="fas fa-edit"></i>
+              <% end %>
+              <%= link_to friend_path(friend),
+                method: :delete,
+                data: { confirm: "Are you sure you want to delete '#{friend.name.capitalize}'?" },
+                class:"text-end btn-x flex-grow-1 icon" do %>
+                <i class="fas fa-trash-alt"></i>
+              <% end %>
             </div>
-          </div>
-        <% end %>
-			</div>
-		</section>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>
