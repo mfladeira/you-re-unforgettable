@@ -24,6 +24,8 @@ gem 'redis', '~> 4.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+gem 'letter_opener', group: :development
+
 gem 'postmark-rails'
 
 gem 'dotenv-rails', groups: [:development, :test]
