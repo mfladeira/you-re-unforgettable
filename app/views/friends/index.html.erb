@@ -7,7 +7,7 @@
             <% if friend.avatar.attached? %>
               <%= cl_image_tag friend.avatar.key, class:"img-fluid rounded-circle", alt:"Card image cap", crop: :fill %>
             <% else %>
-              <%=image_tag('user.png')%>
+              <%=image_tag('user.png', class:"rounded-circle")%>
             <% end %>
             <h3><%= friend.name.capitalize%></h3>
             <h5><span class="friends-detail"> Age: </span><%=((Time.zone.now - friend.birthday .to_time) / 1.year.seconds).floor%> years</h5>
