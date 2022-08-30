@@ -29,7 +29,6 @@ gem 'letter_opener', group: :development
 gem 'dotenv-rails', groups: [:development, :test]
 
 
-gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -42,7 +41,6 @@ gem 'net-pop', require: false
 gem 'devise'
 
 # Cloudinary
-gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.16.0'
 
 gem 'autoprefixer-rails', '10.2.5'
