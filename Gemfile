@@ -26,6 +26,7 @@ gem 'redis', '~> 4.0'
 # gem 'image_processing', '~> 1.2'
 gem 'letter_opener', group: :development
 
+
 gem 'dotenv-rails', groups: [:development, :test]
 
 
