@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'you-re-unforgettable.me'
+  default from: 'gift@you-re-unforgettable.me'
   layout 'mailer'
 end
