@@ -3,9 +3,18 @@
     <div>
       <h2 class="title-edit text-center my-4"> Edit Friend Info</h2>
 
-      <div class="section-divider-edit">
+      <div class="section-divider-edit container">
+        <div class="space"></div>
+        <div class="card">
+          <div class="imgbox">
+            <% if @friend.avatar.attached? %>
+              <%= cl_image_tag @friend.avatar.key, class:"avatar-edit" %>
+            <% else %>
+              <%=image_tag('user.png')%>
+            <% end %>
+          </div>
+        </div>
 
-        <article><%= cl_image_tag @friend.avatar.key%></article>
         <div>
           <%= simple_form_for @friend, html: { class: 'label-new-edit glass-edit p-4 mx-5' } do |f|  %>
             <%= f.input :name, input_html: { class: 'glass-label-edit'}, label: "Birthday Person" %>
