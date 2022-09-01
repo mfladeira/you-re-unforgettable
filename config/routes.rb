@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :friends
-  get 'test', to: "pages#test"
+  get "/about", to: "pages#about_us"
 end

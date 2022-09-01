@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&family=Source+Sans+Pro:wght@200&family=Special+Elite&display=swap');
+
+#partners {
+  h1{
+    font-family: "Poppins";
+    font-size: 3em;
+    color: #0ab5e4;
+    text-shadow: #0ab5e4 0px 0px 10px;
+    font-weight: 700;
+    text-shadow: #0ab5e4;
+  }
+
+  h3{
+    margin-top: 20px;
+    font-size: 24px;
+    color: #0ab5e4;
+    text-shadow: #0ab5e4 0px 0px 10px;
+    font-weight: bold;
+  }
+
+  h5{
+    color: #ff53ff;
+    text-shadow: #ff53ff 0px 0px 10px;
+  }
+
+  p{
+    font-weight: 500;
+    color: #fff;
+    text-shadow: #fff 0px 0px 10px;
+    font-size: 0.9em;
+    margin: 10px auto;
+  }
+}
+
+#partners img{
+	margin-top: -50px;
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	box-shadow: 10px 10px 20px #3c48fa;
+}
+
+#partners i{
+	font-size: 26px;
+	color: #0ab5e4;
+}
+
+
+#partners .card{
+	background: rgba(228, 228, 228, 0.088);
+	box-shadow: 5px 5px 15px  #3c48fa;
+	transition: all 0.3s ease-in;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+}
+
+#partners .card:hover{
+	border: none;
+	box-shadow: 5px 5px 10px #ff53ff;
+}
+
+#partners .card:hover img{
+	border: none;
+	box-shadow: 5px 5px 10px #ff53ff;
+}
+
+#partners .card:hover h3, #partners .card:hover i{
+	color: #fff;
+}
