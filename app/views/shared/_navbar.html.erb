@@ -24,7 +24,7 @@
         <% if current_user.avatar.attached? %>
           <%= cl_image_tag current_user.avatar.key, style: "height: 40px; width: 40px; object-fit: cover;",class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
         <% else %>
-          <%=image_tag('user.png', class:"user-unkown")%>
+          <%=image_tag('user.png', style: "height: 40px; width: 40px; object-fit: cover;",class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false)%>
         <% end %>
           <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown" style="rigth: 0">
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>

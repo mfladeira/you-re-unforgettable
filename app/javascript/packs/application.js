@@ -7,10 +7,12 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import { previewImageOnFileSelect }  from '../components/photo_preview'
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+previewImageOnFileSelect()
 
 import "controllers"
 import "bootstrap"

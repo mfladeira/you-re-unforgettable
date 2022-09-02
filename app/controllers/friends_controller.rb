@@ -1,6 +1,6 @@
 class FriendsController < ApplicationController
   def index
-    @friends = Friend.all
+    @friends = Friend.where(user_id: current_user.id)
   end
 
   def new
@@ -11,11 +11,7 @@ class FriendsController < ApplicationController
     @friend = Friend.new(friends_params)
     @friend.user = current_user
 
-    @product_category = ProductCategory.new()
-    @product_category.friend = @friend
-    @product_category.name = params[:friend][:product_categories]
-
-    if @friend.save && @product_category.save
+    if @friend.save
       redirect_to '/friends'
     end
   end
@@ -30,7 +26,7 @@ class FriendsController < ApplicationController
 
   def edit
     @friend = Friend.find(params[:id])
-    # redirect_to '/friends/'
+    @friend_category = @friend.product_category
   end
 
   def update
@@ -42,6 +38,6 @@ class FriendsController < ApplicationController
   private
 
   def friends_params
-    params.require(:friend).permit(:name, :max_price, :birthday, :avatar)
+    params.require(:friend).permit(:name, :max_price, :birthday, :avatar, :product_category)
   end
 end

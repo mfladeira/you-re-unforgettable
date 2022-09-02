@@ -23,14 +23,16 @@
                                 :end_year => Date.today.year,
                                 :order => [:day, :month, :year],
                                 input_html: { class: 'glass-label-edit'} %>
-            <%= f.input :product_categories, collection: ProductCategory::CATEGORIES, input_html: { class: 'glass-label-edit'}, label: 'Birthday Person Preference'  %>
+            <%= f.input :product_category,collection: Friend::CATEGORIES, input_html: { class: 'glass-label-edit'}, label: 'Birthday Person Preference'  %>
             <div class="buttons-edit">
-              <%= f.input :avatar, as: :file, input_html: { class: ' d-none' },
+              <%= f.input :avatar, as: :file, input_html: { class: ' d-none', id: 'photo-input' },
               label_html:  { class: ' mt-4 cursor '}, label: '📷 Change Avatar' %>
               <%= f.button :submit, '👩🏾‍🤝‍👨🏻 Add Changes', class: "create-friend-edit" %>
             </div>
           <% end %>
         </div>
+        <%= image_tag "", width: 300, height: 300,class: "hidden", id: "photo-preview" %>
+
       </div>
     </div>
   </section>
