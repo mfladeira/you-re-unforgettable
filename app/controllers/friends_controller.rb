@@ -10,8 +10,12 @@ class FriendsController < ApplicationController
   def create
     @friend = Friend.new(friends_params)
     @friend.user = current_user
+    days_until_birthday @friend.birthday
 
     if @friend.save
+      if days_until_birthday(@friend.birthday) == 7
+        UserMailer.welcome(current_user).deliver_now
+      end
       redirect_to '/friends'
     end
   end
@@ -20,7 +24,6 @@ class FriendsController < ApplicationController
     @friend = Friend.find(params[:id])
     @friend.destroy
 
-    # no need for app/views/restaurants/destroy.html.erb
     redirect_to friends_path
   end
 
@@ -40,4 +43,11 @@ class FriendsController < ApplicationController
   def friends_params
     params.require(:friend).permit(:name, :max_price, :birthday, :avatar, :product_category)
   end
+
+  def days_until_birthday(birthday)
+    bday = Date.new(Date.today.year, birthday.month, birthday.day)
+    bday += 1.year if Date.today >= bday
+    (bday - Date.today).to_i
+  end
+
 end
