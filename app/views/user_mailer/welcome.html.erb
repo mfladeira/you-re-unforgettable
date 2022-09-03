@@ -1,1 +1,5 @@
 <h1>Hi <%= @user.email %>, hope you enjoy  the service</h1>
+<h2><%= @friend.name %></h2>
+<% @gifts.each do |g| %>
+  <img src="<%= g.image_url %>" alt="">
+<% end %>

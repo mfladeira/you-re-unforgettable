@@ -1,7 +1,7 @@
 class Friend < ApplicationRecord
-  CATEGORIES = ["Automotive & Powersports", "Beauty", "Books", "Cell Phones & Accessories",
-    "Electronics", "Home & Garden", "Musical Instruments", "Personal Computers",
-    "Sports", "Tools", "Video Games", "Watches"]
+  CATEGORIES = ["Beauty", "Eletronics", "Home & Garden", "Sports", "Watches"]
   belongs_to :user
   has_one_attached :avatar
+  has_many :gifts, dependent: :destroy
+
 end

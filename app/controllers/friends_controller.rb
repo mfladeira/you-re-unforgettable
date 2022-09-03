@@ -11,10 +11,9 @@ class FriendsController < ApplicationController
     @friend = Friend.new(friends_params)
     @friend.user = current_user
     days_until_birthday @friend.birthday
-
     if @friend.save
       if days_until_birthday(@friend.birthday) == 7
-        UserMailer.welcome(current_user).deliver_now
+        UserMailer.welcome(current_user, @friend.product_category, @friend.id).deliver_now
       end
       redirect_to '/friends'
     end

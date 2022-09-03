@@ -5,8 +5,10 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.welcome.subject
   #
-  def welcome(user)
+  def welcome(user, category, friend_id)
     @user = user
+    @gifts = Gift.where(category: category)
+    @friend = Friend.find(friend_id)
     mail to: user.email, subject: "Worked"
   end
 end
