@@ -78,15 +78,6 @@ price: 82.0 , image_url: 'https://m.media-amazon.com/images/I/41IkjFgtKNL._AC_UL
   Gift.create( name: 'Relógio Casio G-Shock Anadigi', link: 'https://www.amazon.com.br/Rel%C3%B3gio-Casio-G-Shock-Masculino-GA-110-1ADR/dp/B0081E6QUA/ref=lp_17882365011_1_1?ufe=app_do%3Aamzn1.fos.25548f35-0de7-44b3-b28e-0f56f3f96147',
     price: 530.00 , image_url: 'https://m.media-amazon.com/images/I/71Y7YqdJKbL._AC_UL480_QL65_.jpg', category: 'Watches')
 
-    Gift.create( name: 'Relógio Champion Feminino Dourado', link: 'https://www.amazon.com.br/Rel%C3%B3gio-Champion-Feminino-Dourado-Anal%C3%B3gico/dp/B08L6XJRYQ/ref=lp_17882365011_1_2?ufe=app_do%3Aamzn1.fos.6121c6c4-c969-43ae-92f7-cc248fc6181d',
-    price: 189.00 , image_url: 'https://m.media-amazon.com/images/I/517CSEvZrSL._AC_UL480_FMwebp_QL65_.jpg', category: 'Watches')
-
-    Gift.create( name: 'Relógio Technos', link: 'https://www.amazon.com.br/Rel%C3%B3gio-Technos-Crystal-Feminino-BJ3851AF/dp/B07RWD6S9Y/ref=lp_17882365011_1_3?ufe=app_do%3Aamzn1.fos.6121c6c4-c969-43ae-92f7-cc248fc6181d',
-    price: 199.99 , image_url: 'https://m.media-amazon.com/images/I/61MvOwQ7uyL._AC_UL480_FMwebp_QL65_.jpg', category: 'Watches')
-
-    Gift.create( name: 'MEGIR Relógio esportivo masculino', link: 'https://www.amazon.com.br/esportivos-masculinos-MEGIR-cron%C3%B3grafo-confort%C3%A1vel/dp/B08D37B55V/ref=lp_17882365011_1_9?ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9',
-    price: 133.99 , image_url: 'hhttps://m.media-amazon.com/images/I/61oyXVbYoxL._AC_UL480_QL65_.jpg', category: 'Watches')
-
     Gift.create( name: 'CURREN 8363 Relógio Masculino de Pulso', link: 'https://www.amazon.com.br/CURREN-Rel%C3%B3gio-Masculino-Pulseira-inoxid%C3%A1vel/dp/B08DQSYVKS/ref=lp_17882365011_1_10?ufe=app_do%3Aamzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9',
     price: 109.97 , image_url: 'https://m.media-amazon.com/images/I/61cQ3XDUGgL._AC_UL480_QL65_.jpg', category: 'Watches')
 

@@ -7,7 +7,7 @@ class UserMailer < ApplicationMailer
   #
   def welcome(user, category, friend_id)
     @user = user
-    @gifts = Gift.where("price < ? and category = ?", 200.to_d, "Watches").first(3)
+    @gifts = Gift.where("price < ? and category = ?", 200.to_d, "Watches").first(5)
     @friend = Friend.find(friend_id)
     mail to: user.email, subject: "Worked"
   end
