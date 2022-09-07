@@ -14,11 +14,11 @@ class FriendsController < ApplicationController
     # UserMailer.welcome(current_user, @friend.product_category, @friend.id).deliver_now
 
     if @friend.save
-      # UserMailer.welcome(current_user, @friend.product_category, @friend.id).deliver_now
+      UserMailer.welcome(current_user, @friend.product_category, @friend.id).deliver_now
 
-      if days_until_birthday(@friend.birthday) == 7
-        UserMailer.welcome(current_user, @friend.product_category, @friend.id).deliver_now
-      end
+      # if days_until_birthday(@friend.birthday) == 7
+      #   UserMailer.welcome(current_user, @friend.product_category, @friend.id).deliver_now
+      # end
       redirect_to '/friends'
     end
   end
