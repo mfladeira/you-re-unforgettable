@@ -1,160 +1,170 @@
-<style>
-  .container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'poppins';
-    width: 100vw;
-    background-color: #e3e3e3;
-    padding: 20px 0;
-  }
 
-  .containerCards {
-    width: 40vw;
-    height: 100%;
-    background: white;
-    padding: 35px;
-    border-radius: 20px;
-    background-color: #202124;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'poppins';
+      width: 100vw;
+      background-color: #e3e3e3;
+      padding: 20px 0;
+    }
 
-  .container-card {
-    display: flex;
-  }
+    .containerCards {
+      width: 40vw;
+      height: 100%;
+      background: white;
+      padding: 35px;
+      border-radius: 20px;
+      background-color: #202124;
+    }
 
-  .paragraph {
-    margin-top: 30px;
-    color: #ff53ff;
-    text-shadow: 0 0 10px #ff53ff,
-      0 0 40px #ff53ff;
-    font-size: 1.8em;
-    text-align: center;
-    line-height: 1.3;
-  }
+    .container-card {
+      display: flex;
+    }
 
-  strong {
-    opacity: 1;
-    color: #0ab5e4;
-    text-shadow: 0 0 10px #0ab5e4,
-      0 0 40px #0ab5e4;
-  }
+    .paragraph {
+      margin-top: 30px;
+      color: #ff53ff;
+      text-shadow: 0 0 10px #ff53ff,
+        0 0 40px #ff53ff;
+      font-size: 1.8em;
+      text-align: center;
+      line-height: 1.3;
+    }
 
-  .flex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    strong {
+      opacity: 1;
+      color: #0ab5e4;
+      text-shadow: 0 0 10px #0ab5e4,
+        0 0 40px #0ab5e4;
+    }
 
-  .avatar-square {
-    width: 100px;
-    border-radius: 0px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-    border: white 5px solid;
-  }
+    .flex{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-  .title-index {
-    font-family: 'poppins';
-    color: #0ab5e4;
-    font-size: 2.5em;
-    text-transform: uppercase;
-    font-weight: 700;
-    text-shadow: 0 0 10px #0ab5e4,
-      0 0 40px #0ab5e4;
-    z-index: 9999;
-    margin-top: 70px;
-  }
+    .avatar-square {
+      width: 100px;
+      border-radius: 0px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+      border: white 5px solid;
+    }
 
-  .avatar-position{
-    margin-top: 70px;
-    transform: rotate(15deg);
-  }
+    .title-index {
+      font-family: 'poppins';
+      color: #0ab5e4;
+      font-size: 2.5em;
+      text-transform: uppercase;
+      font-weight: 700;
+      text-shadow: 0 0 10px #0ab5e4,
+        0 0 40px #0ab5e4;
+      z-index: 9999;
+      margin-top: 70px;
+    }
 
-  .card-trip {
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
+    .avatar-position{
+      margin-top: 70px;
+      transform: rotate(15deg);
+    }
 
-  .card-trip img {
-    height: 220px;
-    width: 200px;
-    object-fit: fill;
-    margin-top: 25px;
-    border: #49717c 3px solid;
-    border-radius: 25px;
-    margin-right: 15px;
-  }
+    .card-trip {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
 
-  .card-trip h2 {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0;
-    font-family: 'arial';
-    color: #ff53ff;
-    text-shadow: 0 0 10px #ff53ff,
-      0 0 40px #ff53ff;
-  }
+    .card-trip img {
+      height: 220px;
+      width: 200px;
+      object-fit: fill;
+      margin-top: 25px;
+      border: #49717c 3px solid;
+      border-radius: 25px;
+      margin-right: 15px;
+    }
 
-  .card-trip-infos{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content:center;
-  }
+    .card-trip h2 {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0;
+      font-family: 'arial';
+      color: #ff53ff;
+      text-shadow: 0 0 10px #ff53ff,
+        0 0 40px #ff53ff;
+    }
 
-  .card-name {
-    font-family: 'arial';
-    color: #ff53ff;
-    text-shadow: 0 0 10px #ff53ff,
-      0 0 40px #ff53ff;
-    font-size: 17px;
-    margin-bottom: 5px;
-  }
+    .card-trip-infos{
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content:center;
+    }
 
-  .card-trip-pricing {
+    .card-name {
       font-family: 'arial';
       color: #ff53ff;
       text-shadow: 0 0 10px #ff53ff,
         0 0 40px #ff53ff;
       font-size: 17px;
-  }
-</style>
+      margin-bottom: 5px;
+    }
 
-<article class="container">
-  <div class="containerCards">
-    <section class="flex">
-      <h2 class="title-index">It's <%= @friend.name %>'s birthday!</h2>
-      <div class="avatar-position">
-        <% if @friend.avatar.attached? %>
-          <%= cl_image_tag @friend.avatar.key, class:"avatar-square", alt:"Card image cap", crop: :fill %>
-        <% else %>
-          <%=image_tag('user.png', class:"rounded-circle")%>
-        <% end %>
-      </div>
-    </section>
-
-    <p class="paragraph">I'ts finally coming! <%= @friend.name %> will turn
-    <%=((Time.zone.now - @friend.birthday .to_time) / 1.year.seconds).floor%>
-    on <%=@friend.birthday.strftime("%B %d")%><span>th.</span><br>
-    Make this date become <strong>unforgettable</strong> to <%= @friend.name %>
-    by choosing one of the gifts below!
-    </p>
-
-
-    <div class="card-trip">
-      <% @gifts.each do |g| %>
-      <div class="container-card">
-        <a href="<%= g.link %>" target="_blank"><img src="<%= g.image_url %>" alt=""></a>
-
-        <div class="card-trip-infos">
-          <p class="card-name"><%= g.name %></p>
-          <p class="card-trip-pricing">Preço: R$ <%= g.price %></p>
+    .card-trip-pricing {
+        font-family: 'arial';
+        color: #ff53ff;
+        text-shadow: 0 0 10px #ff53ff,
+          0 0 40px #ff53ff;
+        font-size: 17px;
+    }
+  </style>
+</head>
+<body>
+  <article class="container">
+    <div class="containerCards">
+      <section class="flex">
+        <h2 class="title-index">It's <%= @friend.name %>'s birthday!</h2>
+        <div class="avatar-position">
+          <% if @friend.avatar.attached? %>
+            <%= cl_image_tag @friend.avatar.key, class:"avatar-square", alt:"Card image cap", crop: :fill %>
+          <% else %>
+            <%=image_tag('user.png', class:"rounded-circle")%>
+          <% end %>
         </div>
-      </div>
-    <% end %>
-    </div>
-  </div>
+      </section>
 
-</article>
+      <p class="paragraph">I'ts finally coming! <%= @friend.name %> will turn
+      <%=((Time.zone.now - @friend.birthday .to_time) / 1.year.seconds).floor%>
+      on <%=@friend.birthday.strftime("%B %d")%><span>th.</span><br>
+      Make this date become <strong>unforgettable</strong> to <%= @friend.name %>
+      by choosing one of the gifts below!
+      </p>
+
+
+      <div class="card-trip">
+        <% @gifts.each do |g| %>
+        <div class="container-card">
+          <a href="<%= g.link %>" target="_blank"><img src="<%= g.image_url %>" alt=""></a>
+
+          <div class="card-trip-infos">
+            <p class="card-name"><%= g.name %></p>
+            <p class="card-trip-pricing">Preço: R$ <%= g.price %></p>
+          </div>
+        </div>
+      <% end %>
+      </div>
+    </div>
+
+  </article>
+</body>
+</html>
