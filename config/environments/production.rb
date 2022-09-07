@@ -6,8 +6,7 @@ Rails.application.configure do
   config.action_mailer.postmark_settings   = { api_token: ENV['POSTMARK_API_TOKEN'] }
   config.action_mailer.default_url_options = { host: "you-re-unforgettable.me" }
   # Code is not reloaded between requests.
-  config.cache_classes = false
-  config.serve_static_assets = true
+  config.cache_classes = true
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
