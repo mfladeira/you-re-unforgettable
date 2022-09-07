@@ -25,10 +25,6 @@
       margin: 0 auto;
     }
 
-    .container-card {
-      display: flex;
-    }
-
     .paragraph {
       margin-top: 30px;
       color: #ff53ff;
@@ -71,13 +67,6 @@
       transform: rotate(15deg);
     }
 
-    .card-trip {
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-    }
-
     .card-trip img {
       height: 220px;
       width: 200px;
@@ -86,6 +75,7 @@
       border: #49717c 3px solid;
       border-radius: 25px;
       margin-right: 15px;
+      text-align: center;
     }
 
     .card-trip h2 {
@@ -96,13 +86,6 @@
       color: #ff53ff;
       text-shadow: 0 0 10px #ff53ff,
         0 0 40px #ff53ff;
-    }
-
-    .card-trip-infos{
-      display: flex;
-      flex-direction: column;
-      align-items: left;
-      justify-content:center;
     }
 
     .card-name {
@@ -127,7 +110,6 @@
   <article class="container">
     <div class="containerCards">
       <section class="flex">
-        <h2 class="title-index">It's <%= @friend.name %>'s birthday!</h2>
         <div class="avatar-position">
           <% if @friend.avatar.attached? %>
             <%= cl_image_tag @friend.avatar.key, class:"avatar-square", alt:"Card image cap", crop: :fill %>
@@ -135,6 +117,7 @@
             <%=image_tag('user.png', class:"rounded-circle")%>
           <% end %>
         </div>
+        <h2 class="title-index">It's <%= @friend.name %>'s birthday!</h2>
       </section>
 
       <p class="paragraph">I'ts finally coming! <%= @friend.name %> will turn
@@ -152,10 +135,9 @@
 
           <div class="card-trip-infos">
             <p class="card-name"><%= g.name %></p>
+            <hr>
             <p class="card-trip-pricing">Preço: R$ <%= g.price %></p>
           </div>
-          <br>
-          <hr>
         </div>
       <% end %>
       </div>
