@@ -171,6 +171,7 @@
 
   /* Image is position nicely under li */
   div.gallery ul li img {
+    object-fit: cover;
     position: absolute;
     left: 0;
     top: 0;
